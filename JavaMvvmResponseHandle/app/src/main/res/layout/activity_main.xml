@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Views.MainActivity">
+
+        <!--(1) Item List Display Layout-->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_jasondata"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <!--(2) Error Display Layout-->
+        <LinearLayout
+            android:id="@+id/ll_errorlayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Network Slow or No Network"
+                android:textColor="@color/red"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                android:gravity="center"/>
+
+            <Button
+                android:id="@+id/btn_retry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Retry"
+                android:textStyle="bold"
+                android:textSize="14dp"
+                android:layout_marginTop="15dp"/>
+
+        </LinearLayout>
+
+        <!--(3) Progress Display Layout-->
+        <!--<LinearLayout
+            android:id="@+id/ll_progresslayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:visibility="visible">
+
+
+            <TextView
+                android:id="@+id/tv_progressmsg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:text="Getting status"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/blue" />
+
+            <ProgressBar
+                android:id="@+id/pb_progressstatus"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:indeterminate="true" />
+
+        </LinearLayout>-->
+
+        <!-- Progress Layout-->
+        <RelativeLayout
+            android:id="@+id/ll_progresslayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="60dp"
+            android:gravity="center"
+            android:visibility="visible"
+            android:layout_centerInParent="true">
+
+            <LinearLayout
+                android:id="@+id/ll_progress_lay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_progress_msg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:text="Getting status"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/red" />
+
+                <ProgressBar
+                    android:id="@+id/pb_progress_status"
+                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:indeterminate="true" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+</layout>
